@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Короче, Склифасовский!",
+  "version": "0.1",
+  "description": "Выдаёт суть длинных русскоязычных статей с помощью YandexGPT",
+  "permissions": ["tabs", "activeTab", "https://300.ya.ru/*", "storage"],
+  "options_page": "options.html",
+
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icon128.png"
+    }
+  },
+
+  "icons": {
+    "128": "icon128.png"
+  }
+}
