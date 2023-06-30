@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Короче, Склифасовский!",
+  "name": "Короче, Склифосовский!",
   "version": "0.1",
-  "description": "Выдаёт суть длинных русскоязычных статей с помощью YandexGPT",
+  "description": "Выдаёт суть длинных статей с помощью YandexGPT",
   "permissions": ["tabs", "activeTab", "https://300.ya.ru/*", "storage"],
   "options_page": "options.html",
 
