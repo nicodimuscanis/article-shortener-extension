@@ -1,12 +1,16 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Короче, Склифосовский!",
   "version": "0.1",
   "description": "Выдаёт суть длинных статей с помощью YandexGPT",
-  "permissions": ["tabs", "activeTab", "https://300.ya.ru/*", "storage"],
-  "options_page": "options.html",
-
-  "browser_action": {
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://300.ya.ru/*"
+  ],
+  "action": {
     "default_popup": "popup.html",
     "default_icon": {
       "16": "icon16.png",
@@ -14,10 +18,13 @@
       "128": "icon128.png"
     }
   },
-
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
     "128": "icon128.png"
+  },
+  "options_ui": {
+    "page": "options.html"
   }
 }
+
