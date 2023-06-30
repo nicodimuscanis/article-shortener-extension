@@ -2,7 +2,7 @@
 
 [![Watch the video](https://img.youtube.com/vi/8vFjYYKZjvE/maxresdefault.jpg)](https://youtu.be/8vFjYYKZjvE)
 
-Расширение для Chrome, автоматизирующее работу с сокращателем статей от Яндекса https://300.ya.ru/, который использует YandexGPT
+Расширение для браузеров на основе Сhromium, автоматизирующее работу с сокращателем статей от Яндекса https://300.ya.ru/, который использует YandexGPT
 
 ## Установка
 1. Скачать и распаковать
