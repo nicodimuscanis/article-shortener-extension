@@ -1,5 +1,7 @@
 # "Короче, Склифосовский!"
 
+[![Watch the video](https://img.youtube.com/vi/8vFjYYKZjvE/maxresdefault.jpg)](https://youtu.be/8vFjYYKZjvE)
+
 Расширение для Chrome, автоматизирующее работу с сокращателем статей от Яндекса https://300.ya.ru/, который использует YandexGPT
 
 ## Установка
