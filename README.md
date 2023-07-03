@@ -1,4 +1,4 @@
-# "Короче, Склифосовский!"
+# "Короче, Склифосовский!" v0.2
 
 [![Watch the video](https://img.youtube.com/vi/8vFjYYKZjvE/maxresdefault.jpg)](https://youtu.be/8vFjYYKZjvE)
 
@@ -7,7 +7,7 @@
 ## Установка
 [Установка из интернет-магазина Chrome](https://chrome.google.com/webstore/detail/%D0%BA%D0%BE%D1%80%D0%BE%D1%87%D0%B5-%D1%81%D0%BA%D0%BB%D0%B8%D1%84%D0%BE%D1%81%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9/mpaebgncookaokflfdhflpmhpimkfeii)<br>
 ИЛИ<br>
-Установка из GitHub
+Установка из GitHub (содержит самые послежнии изменения)
 1. Скачать и распаковать
 2. В браузере на странице: `chrome://extensions` включить режим разработчика и нажать на "загрузить распакованное расширение"
 3. Выбрать папку с распакованными файлами
