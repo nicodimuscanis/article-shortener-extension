@@ -18,4 +18,19 @@ document.addEventListener('DOMContentLoaded', function() {
       console.log('Токен сохранен: ' + token);
     });
   });
+  
+  var selectElement = document.getElementById('open-method');
+
+  // Получаем текущее значение настройки из хранилища расширения
+  chrome.storage.sync.get(['openMethod'], function(result) {
+    var openMethod = result.openMethod || 'currentTab';
+    selectElement.value = openMethod;
+  });
+
+  selectElement.onchange = function() {
+    var openMethod = selectElement.value;
+
+    // Сохраняем выбранное значение настройки в хранилище расширения
+    chrome.storage.sync.set({ openMethod: openMethod });
+  };
 });

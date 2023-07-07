@@ -3,9 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
     var currentUrl = tabs[0].url;
     var endpoint = 'https://300.ya.ru/api/sharing-url';
 
-    // Получаем сохраненный токен из хранилища
-    chrome.storage.sync.get(['token'], function(result) {
+    // Получаем сохраненные параметры из хранилища
+    chrome.storage.sync.get(['token', 'openMethod'], function(result) {
       var token = result.token;
+      var openMethod = result.openMethod || 'currentTab';
       var xhr = new XMLHttpRequest();
       //делаем post {{'article_url': <link>}, headers = {'Authorization': 'OAuth <token>'}}
       xhr.open('POST', endpoint);
@@ -17,8 +18,12 @@ document.addEventListener('DOMContentLoaded', function() {
             var response = JSON.parse(xhr.responseText);
             var sharingUrl = response.sharing_url;
             if (sharingUrl) {
-              chrome.tabs.update(tabs[0].id, { url: sharingUrl });
-              window.close();
+              if (openMethod === 'currentTab') {
+                chrome.tabs.update(tabs[0].id, { url: sharingUrl });
+                window.close();
+              } else if (openMethod === 'newTab') {
+                chrome.tabs.create({ url: sharingUrl });
+              }
             }
           } else {
             console.error('Ошибка при выполнении запроса:', xhr.status);
