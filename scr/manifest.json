@@ -4,6 +4,7 @@
   "version": "0.3",
   "description": "Выдаёт суть длинных статей с помощью YandexGPT",
   "permissions": [
+    "tabs",
     "activeTab",
     "storage"
   ],
@@ -25,6 +26,9 @@
   },
   "options_ui": {
     "page": "options.html"
+  },
+  "background": {
+    "service_worker": "background.js"
   }
 }
 
