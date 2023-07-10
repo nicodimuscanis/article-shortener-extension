@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
       xhr.setRequestHeader('Authorization', 'OAuth ' + token);
       xhr.onreadystatechange = function() {
         if (xhr.readyState === XMLHttpRequest.DONE) {
+          var response = JSON.parse(xhr.responseText);
           if (xhr.status === 200) {
-            var response = JSON.parse(xhr.responseText);
             var sharingUrl = response.sharing_url;
             if (sharingUrl) {
               if (openMethod === 'currentTab') {
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           } else {
             console.error('Ошибка при выполнении запроса:', xhr.status);
-            var errorMessage = xhr.status + ': Неправильный токен или статья не подходит для сокращения. Попробуйте сократить статью вручную';
+            var errorMessage = xhr.status + ': ' + response.status + ", " + response.message;
             var errorElement = document.getElementById('error-message');
             errorElement.innerHTML = '';
             var errorSpan = document.createElement('span');
