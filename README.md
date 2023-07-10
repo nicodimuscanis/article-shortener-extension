@@ -31,7 +31,7 @@
 1. Статья должна быть не больше 30 тыс. символов и быть информационной, т.е. со стихами и художественными произведениями может либо не работать, либо работать весьма странно.
 2. По поводу качества сокращённых статей все вопросы к Яндексу. Я не имею к Яндексу никакого отношения.
 
-[Журнал изменений](https://raw.githubusercontent.com/nicodimuscanis/article-shortener-extension/master/scr/changelog.html)
+[Журнал изменений](https://htmlpreview.github.io/?https://github.com/nicodimuscanis/article-shortener-extension/blob/master/src/changelog.html)
 
 Распространяется под [лицензией MIT](https://github.com/nicodimuscanis/article-shortener-extension/blob/master/LICENSE.md)
 
