@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     width: 500,
                     height: 600
                 });
+                window.close();
             }
             }
           } else {
