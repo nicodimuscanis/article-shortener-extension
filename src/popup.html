@@ -6,7 +6,18 @@
   <script src="popup.js"></script>
 </head>
 <body>
-  <h3>Выжимаю суть...</h3>
+  <style>
+    #summary-text ul, #summary-text li {
+        list-style-type: none;
+        padding-left: 0;
+        margin-left: 0;
+    }
+    #summary-text ul {
+        list-style-type: disc;
+        font-size: 16px;
+    }
+    </style>
   <div id="error-message"></div>
+  <div id="summary-text"></div>
 </body>
 </html>

@@ -24,13 +24,24 @@ document.addEventListener('DOMContentLoaded', function() {
               } else if (openMethod === 'newTab') {
                 chrome.tabs.create({ url: sharingUrl });
               } else if (openMethod === 'popupWindow') {
-                chrome.windows.create({
-                    url: sharingUrl,
-                    type: 'popup',
-                    width: 500,
-                    height: 600
-                });
-            }
+                var content = new XMLHttpRequest();
+                content.open('GET', sharingUrl);
+                content.onreadystatechange = function() {
+                    if (content.readyState === XMLHttpRequest.DONE && content.status === 200) {
+                        var contentMessage = content.responseText;
+                        var parser = new DOMParser();
+                        var htmlDocument = parser.parseFromString(contentMessage, 'text/html');
+                        var targetElement = htmlDocument.querySelector('.summary-text');
+                        var contentElement = document.getElementById('summary-text');
+                        var contentSpan = document.createElement('span');
+                        contentSpan.style.color = 'black';
+                        contentSpan.style.cursor = 'pointer';
+                        contentSpan.innerHTML = targetElement.innerHTML
+                        contentElement.appendChild(contentSpan);
+                    }
+                };
+                content.send();
+              }
             }
           } else {
             console.error('Ошибка при выполнении запроса:', xhr.status);
