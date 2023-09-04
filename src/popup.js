@@ -23,7 +23,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 window.close();
               } else if (openMethod === 'newTab') {
                 chrome.tabs.create({ url: sharingUrl });
-              }
+              } else if (openMethod === 'popupWindow') {
+                chrome.windows.create({
+                    url: sharingUrl,
+                    type: 'popup',
+                    width: 500,
+                    height: 600
+                });
+                window.close();
+            }
             }
           } else {
             console.error('Ошибка при выполнении запроса:', xhr.status);
