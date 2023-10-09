@@ -1,4 +1,4 @@
-# "Короче, Склифосовский!" v0.4
+# "Короче, Склифосовский!" v0.5
 
 [![Watch the video](https://img.youtube.com/vi/8vFjYYKZjvE/maxresdefault.jpg)](https://youtu.be/E_oO9iFZzWY)
 
