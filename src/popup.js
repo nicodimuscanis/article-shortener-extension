@@ -31,20 +31,24 @@ document.addEventListener('DOMContentLoaded', function() {
                     height: 600
                 });
                 window.close();
-            }
+              }
             }
           } else {
             console.error('Ошибка при выполнении запроса:', xhr.status);
-            var errorMessage = xhr.status + ': ' + response.status + ", " + response.message;
+            var errorMessage = xhr.status + ': ' + response.status + ', ' + response.message + ' Попробуйте ввести вашу ссылку или текст вручную в открывшемся окне';
             var errorElement = document.getElementById('error-message');
             errorElement.innerHTML = '';
             var errorSpan = document.createElement('span');
             errorSpan.style.color = 'blue';
-            errorSpan.style.cursor = 'pointer';
             errorSpan.textContent = errorMessage;
-            errorSpan.onclick = function() {
-              window.open('https://300.ya.ru', '_blank');
-            };
+            //открываем страницу для ввода ссылки вручную
+            chrome.windows.create({
+              url: 'https://300.ya.ru',
+              type: 'popup',
+              width: 500,
+              height: 600
+            });
+
             errorElement.appendChild(errorSpan);
           }
         }
